@@ -69,7 +69,7 @@ module Iceboxer
       <<-MSG.strip_heredoc
       Hi there! This issue is being closed because it has been inactive for a while.
 
-      But don't worry, it will live on with ProductPains! Check out it's new home: #{url}
+      But don't worry, it will live on with ProductPains! Check out its new home: #{url}
       MSG
     end
 
