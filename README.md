@@ -1,14 +1,10 @@
-ICEBOXER
-
-![picture of the iceboxer](https://cloud.githubusercontent.com/assets/699550/5100358/75aa3366-6f73-11e4-852d-ad3205f79e3f.png)
+## ICEBOXER
 
 ICEBOXER systemizes a hard decision - when is a valid issue not important enough to be fixed? 
 
 To be productive, we must default to no.  Issues should be considered irrelevant until they've been brought up many times.  Open issue count in aggregate should not affect prioritization when the open issues themselves are of little impact.
 
-So lets close some issues.
-
-ICEBOXER:
+So let's close some issues.
 
 ICEBOXER finds:
 - issues older than a year, with no updates in last 2 months
@@ -19,8 +15,13 @@ To those issues, ICEBOXER:
 - tags the issue with the label 'Icebox'
 - closes the issue
 
-DEPRECATOR:
+How to use it:
 
-deprecator finds issues labelled 'deprecation' that have a date in the title somewhere.
+- Go to https://github.com/settings/tokens/new, generate a token and copy it to clipboard
+- Set an env variable: `export ICEBOXER_GITHUB_API_TOKEN=YOUR_TOKEN`
+- Set an env variable: `export ICEBOXER_REPOS=your_org/your_repo`
 
-Once the date has passed, it adds a comment telling the person to deal with the deprecation.
+```
+bundle install
+rake icebox
+```
