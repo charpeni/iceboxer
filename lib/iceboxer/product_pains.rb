@@ -17,7 +17,7 @@ module Iceboxer
       }
 
       result = JSON.parse(HTTParty.post(uri, {body: data, headers: headers}))
-      "https://productpains.com/post/react-native/#{result['post']['urlName']}"
+      return "https://productpains.com/post/react-native/#{result['post']['urlName']}"
     end
 
   end

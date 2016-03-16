@@ -17,9 +17,12 @@ To those issues, ICEBOXER:
 
 How to use it:
 
-- Go to https://github.com/settings/tokens/new, generate a token and copy it to clipboard
-- Set an env variable: `export ICEBOXER_GITHUB_API_TOKEN=YOUR_TOKEN`
-- Set an env variable: `export ICEBOXER_REPOS=your_org/your_repo`
+- Go to https://github.com/settings/tokens/new, generate a token (make sure you check **public repo access**) and copy it to clipboard
+- Set the env variable: `export ICEBOXER_GITHUB_API_TOKEN=YOUR_TOKEN`
+- Set the env variable: `export ICEBOXER_REPOS=your_org/your_repo`
+- If you want to move the issues to Product Pains:
+  - Go to https://productpains.com, login, open the Chrome dev console, network tab, request cookies, refresh, copy the cookie
+  - Set the env variable `export PRODUCT_PAINS_COOKIE=YOUR_COOKIE`
 
 ```
 bundle install

@@ -14,7 +14,7 @@ module Iceboxer
         puts "Found #{issues.items.count} issues to close in #{@repo} ..."
         issues.items.each do |issue|
           unless already_iceboxed?(issue.number)
-            puts "Closing #{@repo}/issues/#{issue.number}: #{issue.title}"
+            puts "Closing https://github.com/#{@repo}/issues/#{issue.number} #{issue.title}"
 
             if send_to_product_pains?
               send_to_product_pains(issue)
@@ -49,10 +49,9 @@ module Iceboxer
     end
 
     def icebox(issue, reason)
-      Octokit.add_labels_to_an_issue(@repo, issue, ["Icebox"])
-      Octokit.add_comment(@repo, issue, message(reason))
-      Octokit.close_issue(@repo, issue)
-
+      #Octokit.add_labels_to_an_issue(@repo, issue, ["Icebox"])
+      #Octokit.add_comment(@repo, issue, message(reason))
+      #Octokit.close_issue(@repo, issue)
       puts "Iceboxed #{@repo}/issues/#{issue}!"
     end
 
@@ -70,6 +69,12 @@ module Iceboxer
       Hi there! This issue is being closed because it has been inactive for a while.
 
       But don't worry, it will live on with ProductPains! Check out its new home: #{url}
+
+      ProductPains helps the community prioritize the most important issues thanks to its voting feature.
+      It is easy to use - just login with GitHub.
+
+      Also, if this issue is a bug, please consider sending a PR with a fix.
+      We're a small team and rely on the community for bug fixes of issues that don't affect fb apps.
       MSG
     end
 
