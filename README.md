@@ -22,7 +22,7 @@ How to use it:
 - Set the env variable: `export ICEBOXER_REPOS=your_org/your_repo`
 - If you want to move the issues to Product Pains:
   - Go to https://productpains.com, login, open the Chrome dev console, network tab, request cookies, refresh, copy the cookie
-  - Set the env variable `export PRODUCT_PAINS_COOKIE=YOUR_COOKIE`
+  - Set the env variable `export PRODUCT_PAINS_COOKIE="YOUR_COOKIE"` (quotes are important!)
 
 ```
 bundle install
